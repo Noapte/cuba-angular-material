@@ -1,0 +1,47 @@
+[
+  {
+    "productId": 1,
+    "productName": "some product",
+    "shop": "shop 1",
+    "availability": "available",
+    "description": "odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt",
+    "price": 19.95,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/5555"
+  },
+  {
+    "productId": 2,
+    "productName": "product auf",
+    "shop": "shop 2",
+    "availability": "available",
+    "description": "odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt",
+    "price": 32.99,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/5556"
+  },
+  {
+    "productId": 5,
+    "productName": "consequuntur",
+    "shop": "shop 1",
+    "availability": "not available",
+    "description": "odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt",
+    "price": 8.9,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/5556"
+  },
+  {
+    "productId": 8,
+    "productName": "voluptatem",
+    "shop": "shop 1",
+    "availability": "not available",
+    "description": "odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt",
+    "price": 11.55,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/5559"
+  },
+  {
+    "productId": 10,
+    "productName": "nesciunt",
+    "shop": "shop 1",
+    "availability": "available",
+    "description": "odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt",
+    "price": 35.95,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/5559"
+  }
+]

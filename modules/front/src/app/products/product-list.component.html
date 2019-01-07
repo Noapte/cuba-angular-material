@@ -1,0 +1,49 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'>Search product:</div>
+      <div class='col-md-10'>
+        <input type='text'
+               [(ngModel)]='listFilter' />
+      </div>
+    </div>
+    <div class='row'
+         *ngIf='listFilter'>
+      <div class='col-md-6'>
+        <h4>Search: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='products && products.length'>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Shop</th>
+            <th>Available</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let product of filteredProducts'>
+            <td>
+              <a [routerLink]="['/products', product.productId]">
+                {{ product.productName }}
+              </a>
+            </td>
+            <td>{{ product.shop}}</td>
+            <td>{{ product.availability }}</td>
+            <td>{{ product.price | currency:'€' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>
