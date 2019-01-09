@@ -1,5 +1,5 @@
-import {Injectable} from "@angular/core";
-import {CubaApp} from "@cuba-platform/rest/dist-node/cuba";
+import {Injectable} from '@angular/core';
+import {CubaApp} from '@cuba-platform/rest/dist-node/cuba';
 
 @Injectable()
 export class CubaRestService {
@@ -18,10 +18,9 @@ export class CubaRestService {
       .catch(() => {
         alert('Login error');
       });
-    ;
     // console.log(this.cubaApp.getUserInfo())
     // return this.cubaApp.logout().then(()=> {
-    //   console.log("po log out")
+    //   console.log('po log out')
     //   location.reload();
     //
     // });
