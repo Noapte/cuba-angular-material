@@ -12,11 +12,13 @@ import { ProductModule } from './products/product.module';
 
 import {CubaRestService} from "./cuba-rest.service";
 import {WelcomeComponent} from "./home/welcome.component";
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import {WelcomeComponent} from "./home/welcome.component";
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
-    ProductModule
+    ProductModule,
+    DeviceDetectorModule.forRoot()
   ],
   providers: [CubaRestService],
   bootstrap: [AppComponent]

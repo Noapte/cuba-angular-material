@@ -11,4 +11,20 @@ export class CubaRestService {
     return this.cubaApp.login(login, password);
   }
 
+  logout(): any {
+    this.cubaApp.loadEntities('sec$User').then((users) => {
+      console.log(users);
+    })
+      .catch(() => {
+        alert('Login error');
+      });
+    ;
+    // console.log(this.cubaApp.getUserInfo())
+    // return this.cubaApp.logout().then(()=> {
+    //   console.log("po log out")
+    //   location.reload();
+    //
+    // });
+  }
+
 }
