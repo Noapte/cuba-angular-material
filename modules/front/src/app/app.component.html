@@ -13,11 +13,18 @@
   </div>
   <div [hidden]="!loggedIn">
     <nav class='navbar navbar-expand navbar-light bg-light'>
-      <ul class='nav nav-pills'>
-        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Home</a></li>
-        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/products']">Product List</a></li>
+      <ul class='nav'>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/login']">Login</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/help']">Help</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/products']">List of orders</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/list-of-all-requests']">List of all requests</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/report']">Report</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/scan']">Scan</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/log-out']">Log out</a></li>
       </ul>
     </nav>
+
+
     <div class='container'>
       <router-outlet></router-outlet>
     </div>

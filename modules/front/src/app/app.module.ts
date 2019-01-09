@@ -8,16 +8,30 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule} from "@angular/mate
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
 
-import { ProductModule } from './products/product.module';
+
 
 import {CubaRestService} from "./cuba-rest.service";
-import {WelcomeComponent} from "./home/welcome.component";
+
 import { DeviceDetectorModule } from 'ngx-device-detector';
+
+//modules
+import {LoginComponent} from "./login/login.component";
+import {HelpComponent} from "./help/help.component";
+import { ProductModule } from './products/product.module';
+import {ListOfAllRequestsComponent} from "./list-of-all-requests/listOfAllRequests.component";
+import {ReportComponent} from "./report/report.component";
+import {ScanComponent} from "./scan/scan.component";
+import {LogOutComponent} from "./log-out/logOut.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    LoginComponent,
+    HelpComponent,
+    ListOfAllRequestsComponent,
+    ReportComponent,
+    ScanComponent,
+    LogOutComponent
 
   ],
   imports: [
@@ -26,9 +40,14 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
     FormsModule,
     MatInputModule, MatFormFieldModule, MatButtonModule,
     RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+      { path: 'login', component: LoginComponent },
+      { path: 'help', component: HelpComponent },
+      { path: 'list-of-all-requests', component: ListOfAllRequestsComponent },
+      { path: 'scan', component: ScanComponent },
+      { path: 'report', component: ReportComponent },
+      { path: 'log-out', component: LogOutComponent },
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: '**', redirectTo: 'login', pathMatch: 'full' }
     ]),
     ProductModule,
     DeviceDetectorModule.forRoot()
