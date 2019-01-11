@@ -13,6 +13,7 @@
 
 .nav-link {
   font-size: large;
+ color: #337AB7;
 }
 
 .login-button {
@@ -26,4 +27,8 @@
 ::ng-deep .mat-focused .mat-form-field-placeholder{
 
   color:red;
+}
+a:hover {
+
+  text-decoration:underline;
 }

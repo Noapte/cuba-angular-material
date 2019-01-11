@@ -12,11 +12,28 @@
     </form>
   </div>
   <div [hidden]="!loggedIn">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white">
 
-    <nav mat-tab-nav-bar>
-      <a mat-tab-link routerLinkActive='active' [routerLink]="['/products']">List of products</a>
-      <a mat-tab-link routerLinkActive='active' [routerLink]="['/users']">List of all users</a>
-      <a mat-tab-link routerLinkActive='active' [routerLink]="['/log-out']">Log out</a>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse"
+           [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive='active' [routerLink]="['/products']">List of products</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive='active' [routerLink]="['/users']">List of all users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive='active' [routerLink]="['/log-out']">Log out</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <br>
     <div class='container'>

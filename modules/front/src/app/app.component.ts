@@ -16,8 +16,13 @@ export class AppComponent {
   };
 
   loggedIn = false;
+  navbarOpen = false;
 
-  constructor(private cubaRest: CubaRestService,  private router: Router) {
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
+  constructor(private cubaRest: CubaRestService, private router: Router) {
   }
 
   onSubmit() {
