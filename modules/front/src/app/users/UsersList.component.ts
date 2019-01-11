@@ -1,15 +1,14 @@
 import {Component} from '@angular/core';
 import {CubaRestService} from './../api/cuba-rest.service';
-import {map} from 'rxjs/operators';
-import {IProduct} from '../products/product';
-
 
 @Component({
-  templateUrl: './report.component.html'
+  templateUrl: './UsersList.component.html',
+  styleUrls: ['UsersList.component.css']
 })
-export class ReportComponent {
+export class UsersListComponent {
   private name = 'sec$User';
-  private users: Array<{}>;
+  users: Array<{}>;
+  displayedColumns: string[] = ['login', 'name'];
 
   constructor(private cubaRest: CubaRestService) {
     this.cubaRest.loadSources(this.name)
