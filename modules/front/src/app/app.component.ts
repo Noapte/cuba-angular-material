@@ -21,8 +21,9 @@ export class AppComponent {
 
   onSubmit() {
     this.cubaRest.login(this.loginModel.appUrl, this.loginModel.login, this.loginModel.password)
-      .then(() => {
+      .then((user) => {
         this.loggedIn = true;
+        localStorage.setItem('currentUser', JSON.stringify(user));
       })
       .catch(() => {
         alert('Login error');

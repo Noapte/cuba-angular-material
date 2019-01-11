@@ -14,6 +14,7 @@ export class LogOutComponent {
     this.cubaRest.logout()
       .then(() => {
         location.reload();
+        localStorage.removeItem('currentUser');
         this.router.navigate(['/']);
       })
       .catch(() => {
