@@ -13,7 +13,7 @@ export class ProductService {
   private data = [
     {
       'productId': 1,
-      'productName': 'some pddddroduct',
+      'productName': 'some pdroduct',
       'shop': 'shop 1',
       'availability': 'available',
       'description': 'odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt',

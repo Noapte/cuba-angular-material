@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {CubaRestService} from './cuba-rest.service';
-import {DeviceDetectorService} from 'ngx-device-detector';
+import {CubaRestService} from './api/cuba-rest.service';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +10,13 @@ export class AppComponent {
 
   loginModel = {
     appUrl: 'http://localhost:8080/app/rest/',
-    login: null,
-    password: null
+    login: 'admin',
+    password: 'admin'
   };
 
   loggedIn = false;
-  deviceInfo = null;
 
-  constructor(private cubaRest: CubaRestService, private deviceService: DeviceDetectorService) {
-    this.epicFunction();
+  constructor(private cubaRest: CubaRestService) {
   }
 
   onSubmit() {
@@ -31,16 +28,4 @@ export class AppComponent {
         alert('Login error');
       });
   }
-
-  epicFunction() {
-    this.deviceInfo = this.deviceService.getDeviceInfo();
-    // const isMobile = this.deviceService.isMobile();
-    // const isTablet = this.deviceService.isTablet();
-    // const isDesktopDevice = this.deviceService.isDesktop();
-    console.log(this.deviceInfo);
-    // console.log(isMobile);  // returns if the device is a mobile device (android / iPhone / windows-phone etc)
-    // console.log(isTablet);  // returns if the device us a tablet (iPad etc)
-    // console.log(isDesktopDevice); // returns if the app is running on a Desktop browser.
-  }
-
 }

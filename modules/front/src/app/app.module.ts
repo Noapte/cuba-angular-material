@@ -7,11 +7,10 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/mate
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 
-import {CubaRestService} from './cuba-rest.service';
+import {CubaRestService} from './api/cuba-rest.service';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 
 //modules
-import {LoginComponent} from './login/login.component';
 import {HelpComponent} from './help/help.component';
 import { ProductModule } from './products/product.module';
 import {ListOfAllRequestsComponent} from './list-of-all-requests/listOfAllRequests.component';
@@ -22,7 +21,6 @@ import {LogOutComponent} from './log-out/logOut.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HelpComponent,
     ListOfAllRequestsComponent,
     ReportComponent,
@@ -36,7 +34,6 @@ import {LogOutComponent} from './log-out/logOut.component';
     FormsModule,
     MatInputModule, MatFormFieldModule, MatButtonModule,
     RouterModule.forRoot([
-      { path: 'login', component: LoginComponent },
       { path: 'help', component: HelpComponent },
       { path: 'list-of-all-requests', component: ListOfAllRequestsComponent },
       { path: 'scan', component: ScanComponent },
