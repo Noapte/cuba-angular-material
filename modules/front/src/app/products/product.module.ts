@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductDetailGuard } from './product-detail/product-detail.guard';
+import {DemoMaterialModule} from './../material-module';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { ProductDetailGuard } from './product-detail/product-detail.guard';
         component: ProductDetailComponent
       },
     ]),
+    DemoMaterialModule,
     CommonModule,
     FormsModule
   ],

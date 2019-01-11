@@ -10,6 +10,7 @@ import { ProductService } from '../product.service';
 export class ProductListComponent implements OnInit {
   pageTitle = 'Product List';
   errorMessage = '';
+  displayedColumns: string[] = ['productName', 'shop', 'availability', 'price'];
 
   _listFilter = '';
   get listFilter(): string {
