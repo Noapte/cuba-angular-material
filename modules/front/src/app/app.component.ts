@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {CubaRestService} from './api/cuba-rest.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent {
 
   loggedIn = false;
 
-  constructor(private cubaRest: CubaRestService) {
+  constructor(private cubaRest: CubaRestService,  private router: Router) {
   }
 
   onSubmit() {
@@ -24,6 +25,7 @@ export class AppComponent {
       .then((user) => {
         this.loggedIn = true;
         localStorage.setItem('currentUser', JSON.stringify(user));
+        this.router.navigate(['/']);
       })
       .catch(() => {
         alert('Login error');

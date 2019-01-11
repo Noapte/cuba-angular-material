@@ -15,7 +15,7 @@ export class CubaRestService {
     return this.cubaApp.logout();
   }
 
-  loadSources(name: string): Promise<any[]>{
+  loadSources(name: string): Promise<any[]> {
     return this.cubaApp.loadEntities(name);
   }
 }
