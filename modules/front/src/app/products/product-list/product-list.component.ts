@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
+    this.filteredProducts = this.listFilter ? this.applyFilter(this.listFilter) : this.products;
   }
 
   filteredProducts: IProduct[] = [];
@@ -28,7 +28,7 @@ export class ProductListComponent implements OnInit {
 
   }
 
-  performFilter(filterBy: string): IProduct[] {
+  applyFilter(filterBy: string): IProduct[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.products.filter((product: IProduct) =>
       product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
