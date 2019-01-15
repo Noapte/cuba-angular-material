@@ -3,6 +3,7 @@ import {CubaRestService} from './../api/cuba-rest.service';
 import {Router} from '@angular/router';
 
 @Component({
+  selector: 'log-out',
   templateUrl: './logOut.component.html',
   styleUrls: ['./logOut.component.css']
 })

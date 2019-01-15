@@ -1,11 +1,11 @@
-<div >
+<div>
   <div [hidden]="loggedIn" class="main-layout">
-    <form class="login-form" (ngSubmit)="onSubmit()" >
+    <form class="login-form" (ngSubmit)="onSubmit()">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Login"  [(ngModel)]="loginModel.login" name="login">
+        <input matInput placeholder="Login" [(ngModel)]="loginModel.login" name="login">
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Password"  type="password" [(ngModel)]="loginModel.password" name="password">
+        <input matInput placeholder="Password" type="password" [(ngModel)]="loginModel.password" name="password">
       </mat-form-field>
 
       <button mat-raised-button color="primary" class="login-button">Login</button>
@@ -15,22 +15,14 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="text-decoration-color: white; background-color: #779ECB">
 
       <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
-        <span class="navbar-toggler-icon" ></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
-
 
       <div class="collapse navbar-collapse"
            [ngClass]="{ 'show': navbarOpen }">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" style="color: white"  routerLinkActive='active' [routerLink]="['/products']">List of products</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" routerLinkActive='active' [routerLink]="['/users']">List of all users</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  style="color: white"  routerLinkActive='active' [routerLink]="['/log-out']">Log out</a>
+          <li *ngFor="let item of navItem; let i = index">
+            <a class="nav-link" style="color: white" routerLinkActive='active' [routerLink]="[item.link]">{{item.description}}</a>
           </li>
         </ul>
       </div>

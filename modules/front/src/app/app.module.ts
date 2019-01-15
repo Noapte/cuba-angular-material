@@ -12,7 +12,7 @@ import {CubaRestService} from './api/cuba-rest.service';
 import {ProductModule} from './products/product.module';
 import {UsersListComponent} from './users/UsersList.component';
 import {LogOutComponent} from './log-out/logOut.component';
-import {DemoMaterialModule} from './material-module';
+import {MaterialModule} from './material-module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import {DemoMaterialModule} from './material-module';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    DemoMaterialModule,
+    MaterialModule,
     RouterModule.forRoot([
       { path: 'users', component: UsersListComponent },
       { path: 'log-out', component: LogOutComponent },

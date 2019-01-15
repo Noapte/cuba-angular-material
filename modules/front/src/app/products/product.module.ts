@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-import {DemoMaterialModule} from './../material-module';
+import {MaterialModule} from './../material-module';
 
 @NgModule({
   imports: [
@@ -16,7 +16,7 @@ import {DemoMaterialModule} from './../material-module';
         component: ProductDetailComponent
       },
     ]),
-    DemoMaterialModule,
+    MaterialModule,
     CommonModule,
     FormsModule
   ],
