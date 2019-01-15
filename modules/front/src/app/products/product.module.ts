@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductDetailGuard } from './product-detail/product-detail.guard';
 import {DemoMaterialModule} from './../material-module';
 
 @NgModule({
@@ -14,7 +13,6 @@ import {DemoMaterialModule} from './../material-module';
       { path: 'products', component: ProductListComponent },
       {
         path: 'products/:id',
-        canActivate: [ProductDetailGuard],
         component: ProductDetailComponent
       },
     ]),
