@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 
 import {CubaRestService} from './api/cuba-rest.service';
@@ -21,6 +22,7 @@ import {DemoMaterialModule} from './material-module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     DemoMaterialModule,
     RouterModule.forRoot([
