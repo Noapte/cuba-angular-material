@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  appUrl:  'http://localhost:8080/app/rest/'
 };
+//app Url will be changed

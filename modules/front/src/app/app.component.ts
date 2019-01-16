@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CubaRestService} from './api/cuba-rest.service';
 import {Router} from '@angular/router';
+import { environment} from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import {Router} from '@angular/router';
 export class AppComponent {
 
   loginModel = {
-    appUrl: 'http://localhost:8080/app/rest/',
+    appUrl: environment.appUrl,
     login: 'admin',
     password: 'admin'
   };
