@@ -12,7 +12,7 @@ import {CubaRestService} from './api/cuba-rest.service';
 import {ProductModule} from './products/product.module';
 import {UsersListComponent} from './users/UsersList.component';
 import {LogOutComponent} from './log-out/logOut.component';
-import {LogInComponent} from './log-in/logIn.component';
+import {MenuComponent} from './menu/menu.component';
 import {MaterialModule} from './material-module';
 
 @NgModule({
@@ -20,7 +20,7 @@ import {MaterialModule} from './material-module';
     AppComponent,
     UsersListComponent,
     LogOutComponent,
-    LogInComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,

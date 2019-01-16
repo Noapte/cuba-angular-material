@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {CubaRestService} from './api/cuba-rest.service';
 import {Router} from '@angular/router';
-import { environment} from './../environments/environment';
+import {environment} from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -15,18 +15,7 @@ export class AppComponent {
     login: 'admin',
     password: 'admin'
   };
-
-  navItem = [{link: '/products', description: 'List of all products'}, {
-    link: '/users',
-    description: 'List of all users'
-  }, {link: '/log-out', description: 'Log out'}];
-
   loggedIn = false;
-  navbarOpen = false;
-
-  toggleNavbar() {
-    this.navbarOpen = !this.navbarOpen;
-  }
 
   constructor(private cubaRest: CubaRestService, private router: Router) {
   }
