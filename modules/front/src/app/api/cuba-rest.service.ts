@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {CubaApp} from '@cuba-platform/rest/dist-node/cuba';
 import {Router} from '@angular/router';
+import {errors} from './../consts/errors';
 
 @Injectable()
 export class CubaRestService {
@@ -20,7 +21,7 @@ export class CubaRestService {
         this.router.navigate(['/']);
       })
       .catch(() => {
-        alert('Login error');
+        alert(errors.LOG_IN_ERROR);
       });
   }
 
@@ -33,7 +34,7 @@ export class CubaRestService {
         this.router.navigate(['/']);
       })
       .catch(() => {
-        alert('Log out error');
+        alert(errors.LOG_OUT_ERROR);
       });
   }
 

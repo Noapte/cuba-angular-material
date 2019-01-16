@@ -11,24 +11,6 @@
   flex-direction: column;
 }
 
-.nav-link {
-  color: white;
-  font-size: large;
-}
-
 .login-button {
   background-color: #337AB7;
-}
-::ng-deep .mat-form-field-placeholder{
-
-  color:red;
-}
-
-::ng-deep .mat-focused .mat-form-field-placeholder{
-
-  color:red;
-}
-a:hover {
-
-  text-decoration:underline;
 }
