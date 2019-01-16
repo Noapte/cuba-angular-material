@@ -1,16 +1,8 @@
 <div>
-  <div [hidden]="loggedIn" class="main-layout">
-    <form class="login-form" (ngSubmit)="onSubmit()">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Login" [(ngModel)]="loginModel.login" name="login">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Password" type="password" [(ngModel)]="loginModel.password" name="password">
-      </mat-form-field>
-      <button mat-raised-button color="primary" class="login-button">Login</button>
-    </form>
-  </div>
-  <div [hidden]="!loggedIn">
+  <div *ngIf="isLogged(); else templateName">
     <app-menu></app-menu>
   </div>
+  <ng-template #templateName>
+    <app-log-in></app-log-in>
+  </ng-template>
 </div>

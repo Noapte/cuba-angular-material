@@ -1,7 +1,5 @@
 import {Component} from '@angular/core';
 import {CubaRestService} from './api/cuba-rest.service';
-import {Router} from '@angular/router';
-import {environment} from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,25 +8,10 @@ import {environment} from './../environments/environment';
 })
 export class AppComponent {
 
-  loginModel = {
-    appUrl: environment.appUrl,
-    login: 'admin',
-    password: 'admin'
-  };
-  loggedIn = false;
-
-  constructor(private cubaRest: CubaRestService, private router: Router) {
+  constructor(private cubaRest: CubaRestService) {
   }
 
-  onSubmit() {
-    this.cubaRest.login(this.loginModel.appUrl, this.loginModel.login, this.loginModel.password)
-      .then((user) => {
-        this.loggedIn = true;
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        this.router.navigate(['/']);
-      })
-      .catch(() => {
-        alert('Login error');
-      });
+  isLogged() {
+    return this.cubaRest.logged;
   }
 }
