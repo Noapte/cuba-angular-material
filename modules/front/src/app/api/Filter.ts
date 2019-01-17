@@ -11,4 +11,8 @@ export class Filter implements EntityFilter {
     };
     this.conditions = [condition];
   }
+
+  getConditions(): object {
+    return {conditions: this.conditions};
+  }
 }
