@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
-import {CubaApp, EntityFilter, Condition, OperatorType} from '@cuba-platform/rest/dist-node/cuba';
+import {CubaApp} from '@cuba-platform/rest/dist-node/cuba';
 import {Router} from '@angular/router';
 import {errors} from './../consts/errors';
+import {Filter} from './Filter';
 
 @Injectable()
 export class CubaRestService {
@@ -56,16 +57,7 @@ export class CubaRestService {
   }
 
   searchEntities(entityName: string, propertyName: string, value: string): Promise<any[]> {
-    const operationType: OperatorType = 'contains';
-
-    const condition: Condition = {
-      property: propertyName,
-      operator: operationType,
-      value: value
-    };
-    const filter: EntityFilter = {
-      conditions: [condition]
-    };
+    const filter = new Filter(propertyName, value);
     return this.cubaApp.searchEntities(entityName, filter);
 
   }
