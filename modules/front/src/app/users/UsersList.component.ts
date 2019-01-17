@@ -11,7 +11,7 @@ export class UsersListComponent {
   displayedColumns: string[] = ['login', 'name', 'role'];
 
   constructor(private cubaRest: CubaRestService) {
-    this.cubaRest.loadSources(this.name)
+    this.cubaRest.loadEntities(this.name)
       .then((users) => {
         this.users = users.map(user => {
           return {
